@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PRIMARY SEO -->
+  <title>SmileCare Dental Clinic | Family Dentist in Kuala Lumpur</title>
+  <meta name="description" content="SmileCare Dental Clinic provides affordable family dentistry, scaling, whitening, fillings, braces and emergency dental care in Kuala Lumpur.">
+  <meta name="keywords" content="dentist Kuala Lumpur, dental clinic KL, teeth whitening, braces, scaling, family dentist">
+  <meta name="author" content="SmileCare Dental Clinic">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.example.com/">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SmileCare Dental Clinic">
+  <meta property="og:description" content="Friendly and affordable dental care for the whole family.">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SmileCare Dental Clinic">
+  <meta name="twitter:description" content="Friendly and affordable dental care for the whole family.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85">
+
+  <meta name="theme-color" content="#0f766e">
+
+  <!-- LOCAL BUSINESS SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Dentist",
+    "name":"SmileCare Dental Clinic",
+    "url":"https://www.example.com/",
+    "telephone":"+60 12-345 6789",
+    "email":"hello@smilecare.com",
+    "priceRange":"RM",
+    "image":"https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"25 Jalan Example",
+      "addressLocality":"Kuala Lumpur",
+      "addressCountry":"MY"
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
+    ],
+    "sameAs":[
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --primary:#0f766e;
+      --primary-dark:#0b5d57;
+      --accent:#f1b84b;
+      --soft:#eaf8f6;
+      --ink:#183437;
+      --muted:#667b7d;
+      --white:#fff;
+      --line:#dce9e8;
+      --shadow:0 15px 40px rgba(15,118,110,.12);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:#f7fbfb;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px,92%);margin:auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(12px);
+    }
+    .nav{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      font-size:22px;
+      font-weight:900;
+      color:var(--primary);
+    }
+    .brand-mark{
+      width:42px;height:42px;border-radius:12px;
+      display:grid;place-items:center;
+      background:var(--soft);font-size:23px;
+    }
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-weight:800;
+      font-size:14px;
+    }
+    .menu a{
+      position:relative;
+      padding:27px 0;
+    }
+    .menu a.active{color:var(--primary)}
+    .menu a.active::after{
+      content:"";
+      position:absolute;
+      left:0;right:0;bottom:0;
+      height:3px;background:var(--accent);
+      border-radius:999px;
+    }
+    .menu-toggle{
+      display:none;border:0;background:none;
+      font-size:29px;cursor:pointer;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border:0;
+      border-radius:12px;
+      padding:14px 20px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+    .btn-light{background:#fff;color:var(--primary);border:1px solid var(--line)}
+    .btn-light:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+
+    main{min-height:70vh}
+    .page{
+      display:none;
+      animation:pageIn .35s ease;
+    }
+    .page.active{display:block}
+    @keyframes pageIn{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:none}
+    }
+
+    .hero{
+      padding:78px 0;
+      background:
+        radial-gradient(circle at 82% 10%,rgba(15,118,110,.16),transparent 28%),
+        linear-gradient(135deg,#f9fdfd,#e6f6f3);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:center;
+      gap:48px;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#fff;
+      color:var(--primary);
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+    h1,h2,h3{line-height:1.15}
+    .hero h1{
+      font-size:clamp(42px,6vw,68px);
+      letter-spacing:-2px;
+      margin-bottom:18px;
+    }
+    .hero h1 span{color:var(--primary)}
+    .hero p{
+      color:var(--muted);
+      font-size:18px;
+      max-width:610px;
+      margin-bottom:28px;
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+    .hero-points{display:flex;flex-wrap:wrap;gap:18px;font-size:14px;font-weight:800}
+
+    .hero-image{
+      min-height:490px;
+      border-radius:28px;
+      background:
+        linear-gradient(rgba(15,118,110,.08),rgba(15,118,110,.08)),
+        url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85") center/cover;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+    .hero-badge{
+      position:absolute;
+      left:20px;bottom:20px;
+      background:#fff;
+      border-radius:16px;
+      padding:16px 19px;
+      box-shadow:var(--shadow);
+    }
+    .hero-badge strong{display:block;color:var(--primary);font-size:21px}
+    .hero-badge span{font-size:13px;color:var(--muted)}
+
+    .section{padding:78px 0}
+    .section-head{
+      max-width:720px;
+      margin:0 auto 42px;
+      text-align:center;
+    }
+    .section-head small{
+      color:var(--primary);
+      font-weight:900;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+    .section-head h2{
+      font-size:clamp(32px,4vw,46px);
+      margin:10px 0 14px;
+    }
+    .section-head p{color:var(--muted)}
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:-38px;
+      position:relative;
+      z-index:3;
+    }
+    .stat{
+      background:#fff;
+      padding:24px;
+      text-align:center;
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+    }
+    .stat strong{display:block;color:var(--primary);font-size:28px}
+    .stat span{font-size:13px;color:var(--muted)}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      transition:.25s ease;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .icon{
+      width:54px;height:54px;border-radius:15px;
+      display:grid;place-items:center;
+      background:var(--soft);
+      font-size:25px;
+      margin-bottom:18px;
+    }
+    .card h3{font-size:21px;margin-bottom:9px}
+    .card p{color:var(--muted);font-size:15px}
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:48px;
+      align-items:center;
+    }
+    .feature-image{
+      min-height:480px;
+      border-radius:26px;
+      background:url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85") center/cover;
+      box-shadow:var(--shadow);
+    }
+    .copy h2{
+      font-size:clamp(34px,4vw,48px);
+      margin-bottom:16px;
+    }
+    .copy p{color:var(--muted);margin-bottom:22px}
+    .checks{display:grid;gap:12px;margin-bottom:26px}
+    .check{display:flex;gap:10px;font-weight:800}
+    .check span{color:var(--primary)}
+
+    .page-banner{
+      padding:66px 0;
+      background:linear-gradient(135deg,var(--primary),#22a79c);
+      color:#fff;
+      text-align:center;
+    }
+    .page-banner h1{font-size:clamp(38px,5vw,60px);margin-bottom:10px}
+    .page-banner p{color:#dff8f5;max-width:650px;margin:auto}
+
+    .price-grid,.team-grid,.review-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .price-card,.team-card,.review-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 10px 28px rgba(15,118,110,.07);
+    }
+    .price-card{padding:28px}
+    .price-card strong{color:var(--primary);font-size:28px}
+    .price-card p{color:var(--muted);margin-top:8px}
+    .team-photo{
+      min-height:330px;
+      background-position:center top;
+      background-size:cover;
+    }
+    .team-card:nth-child(1) .team-photo{background-image:url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85")}
+    .team-card:nth-child(2) .team-photo{background-image:url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85")}
+    .team-card:nth-child(3) .team-photo{background-image:url("https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=85")}
+    .team-copy,.review-card{padding:24px}
+    .team-copy h3{margin-bottom:5px}
+    .team-copy p{color:var(--primary);font-weight:800;font-size:14px}
+    .review-card .stars{color:#d69d2f;letter-spacing:2px;margin-bottom:12px}
+    .review-card p{color:var(--muted);margin-bottom:16px}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:30px;
+      align-items:start;
+    }
+    .contact-card,.form-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+    .contact-list{display:grid;gap:18px;color:var(--muted)}
+    .contact-list strong{display:block;color:var(--ink)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:grid;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-weight:800;font-size:13px}
+    .field input,.field select,.field textarea{
+      width:100%;padding:13px 14px;border-radius:12px;
+      border:1px solid var(--line);outline:none;
+      background:#fbfefe;
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 3px rgba(15,118,110,.1);
+    }
+    .success{
+      display:none;
+      margin-top:14px;
+      padding:12px;
+      border-radius:12px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      font-weight:800;
+    }
+    .map{margin-top:24px;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+    .map iframe{width:100%;height:320px;border:0}
+
+    footer{
+      background:#0e2f31;
+      color:#dbe9e9;
+      padding:44px 0 24px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:34px;
+      margin-bottom:30px;
+    }
+    .footer-grid p,.footer-grid a{color:#9fb7b8}
+    .footer-grid a{display:block;margin:8px 0}
+    .footer-bottom{
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.12);
+      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+      font-size:13px;color:#8ea7a8;
+    }
+
+    .floating-whatsapp{
+      position:fixed;
+      right:20px;bottom:20px;
+      width:58px;height:58px;border-radius:50%;
+      display:grid;place-items:center;
+      background:#25d366;color:#fff;font-size:26px;
+      box-shadow:0 15px 35px rgba(37,211,102,.35);
+      z-index:999;
+    }
+
+    @media(max-width:900px){
+      .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
+      .cards,.price-grid,.team-grid,.review-grid{grid-template-columns:repeat(2,1fr)}
+      .stats{grid-template-columns:repeat(2,1fr);margin-top:24px}
+    }
+    @media(max-width:720px){
+      .menu{
+        position:absolute;
+        top:74px;left:0;right:0;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        background:#fff;
+        padding:18px 4%;
+        border-bottom:1px solid var(--line);
+      }
+      .menu.open{display:flex}
+      .menu a{padding:8px 0}
+      .menu a.active::after{display:none}
+      .menu-toggle{display:block}
+      .desktop-cta{display:none}
+      .cards,.price-grid,.team-grid,.review-grid,.form-grid,.footer-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .hero{padding:58px 0}
+      .hero-image{min-height:390px}
+      .section{padding:60px 0}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand route-link" href="#/home" data-route="home">
+      <span class="brand-mark">🦷</span>
+      SmileCare Dental
+    </a>
+
+    <nav class="menu" id="menu">
+      <a class="route-link" href="#/home" data-route="home">Home</a>
+      <a class="route-link" href="#/services" data-route="services">Services</a>
+      <a class="route-link" href="#/about" data-route="about">About</a>
+      <a class="route-link" href="#/dentists" data-route="dentists">Dentists</a>
+      <a class="route-link" href="#/contact" data-route="contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary desktop-cta route-link" href="#/contact" data-route="contact">Book Appointment</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HOME PAGE -->
+  <section class="page active" id="page-home" data-title="SmileCare Dental Clinic | Family Dentist in Kuala Lumpur" data-description="SmileCare Dental Clinic provides affordable and friendly family dental care in Kuala Lumpur.">
+    <div class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✓ Trusted family dental care</div>
+          <h1>A brighter smile starts with <span>better care.</span></h1>
+          <p>Friendly, professional dental treatment for children, adults and families in a comfortable modern clinic.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary route-link" href="#/contact" data-route="contact">Book Appointment</a>
+            <a class="btn btn-light" href="tel:+60123456789">Call +60 12-345 6789</a>
+          </div>
+          <div class="hero-points">
+            <span>✓ Experienced dentists</span>
+            <span>✓ Transparent pricing</span>
+            <span>✓ Gentle treatment</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-badge">
+            <strong>4.9 ★★★★★</strong>
+            <span>Based on patient reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container stats">
+      <div class="stat"><strong>10+</strong><span>Years of Experience</span></div>
+      <div class="stat"><strong>5,000+</strong><span>Happy Patients</span></div>
+      <div class="stat"><strong>6</strong><span>Core Treatments</span></div>
+      <div class="stat"><strong>4.9</strong><span>Average Rating</span></div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <small>Popular Treatments</small>
+          <h2>Dental care for every stage of life</h2>
+          <p>From simple check-ups to smile improvement, our team is here to help you feel comfortable and confident.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">✨</div><h3>Scaling & Polishing</h3><p>Professional cleaning to remove plaque, stains and tartar.</p></article>
+          <article class="card"><div class="icon">😁</div><h3>Teeth Whitening</h3><p>Safe whitening options for a cleaner, brighter smile.</p></article>
+          <article class="card"><div class="icon">🦷</div><h3>Braces & Aligners</h3><p>Personalised orthodontic care for children, teens and adults.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#eef8f6">
+      <div class="container split">
+        <div class="feature-image"></div>
+        <div class="copy">
+          <h2>Comfortable care in a modern clinic</h2>
+          <p>We explain every option clearly before treatment begins, so you can make informed decisions without pressure.</p>
+          <div class="checks">
+            <div class="check"><span>✓</span> Gentle care for nervous patients</div>
+            <div class="check"><span>✓</span> Clear pricing and treatment explanation</div>
+            <div class="check"><span>✓</span> Family-friendly clinic environment</div>
+          </div>
+          <a class="btn btn-primary route-link" href="#/about" data-route="about">Learn About Our Clinic</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- SERVICES PAGE -->
+  <section class="page" id="page-services" data-title="Dental Services | SmileCare Dental Clinic" data-description="Explore scaling, whitening, braces, fillings, root canal and emergency dental services at SmileCare Dental Clinic.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Dental Services</h1>
+        <p>Complete general, cosmetic and family dental care in one convenient clinic.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="cards">
+          <article class="card"><div class="icon">✨</div><h3>Scaling & Polishing</h3><p>Routine professional cleaning to protect your teeth and gums.</p></article>
+          <article class="card"><div class="icon">😁</div><h3>Teeth Whitening</h3><p>Professional whitening designed for safer and more even results.</p></article>
+          <article class="card"><div class="icon">🪥</div><h3>Dental Fillings</h3><p>Natural-looking fillings for damaged or decayed teeth.</p></article>
+          <article class="card"><div class="icon">🦷</div><h3>Braces & Aligners</h3><p>Orthodontic options tailored to your smile and lifestyle.</p></article>
+          <article class="card"><div class="icon">🩺</div><h3>Root Canal</h3><p>Relieve pain and preserve infected teeth where possible.</p></article>
+          <article class="card"><div class="icon">⚡</div><h3>Emergency Care</h3><p>Prompt assessment for toothache, swelling or dental injury.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#eef8f6">
+      <div class="container">
+        <div class="section-head">
+          <small>Estimated Pricing</small>
+          <h2>Clear starting prices</h2>
+          <p>Final pricing depends on examination and treatment complexity.</p>
+        </div>
+        <div class="price-grid">
+          <div class="price-card"><h3>Scaling</h3><strong>From RM80</strong><p>Professional cleaning and polishing.</p></div>
+          <div class="price-card"><h3>Whitening</h3><strong>From RM399</strong><p>Clinic-based smile brightening.</p></div>
+          <div class="price-card"><h3>Braces</h3><strong>From RM4,500</strong><p>Subject to consultation and treatment plan.</p></div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ABOUT PAGE -->
+  <section class="page" id="page-about" data-title="About SmileCare Dental Clinic" data-description="Learn about SmileCare Dental Clinic, our patient-first approach and our modern dental facilities.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>About Our Clinic</h1>
+        <p>Professional care, clear communication and a comfortable experience from your first visit.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container split">
+        <div class="feature-image"></div>
+        <div class="copy">
+          <h2>We make dental visits feel easier</h2>
+          <p>SmileCare Dental was created to provide accessible, trustworthy dental care for local families. Our team focuses on prevention, clear advice and long-term oral health.</p>
+          <div class="checks">
+            <div class="check"><span>✓</span> Modern dental equipment</div>
+            <div class="check"><span>✓</span> Friendly and experienced clinical team</div>
+            <div class="check"><span>✓</span> Comfortable treatment rooms</div>
+            <div class="check"><span>✓</span> Clear treatment recommendations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#eef8f6">
+      <div class="container">
+        <div class="section-head">
+          <small>Why Choose Us</small>
+          <h2>Simple, honest and patient-focused</h2>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">💬</div><h3>Clear Communication</h3><p>We explain your options before any treatment begins.</p></article>
+          <article class="card"><div class="icon">🌿</div><h3>Comfort First</h3><p>Our clinic is designed to help patients feel calm and relaxed.</p></article>
+          <article class="card"><div class="icon">🛡️</div><h3>Long-Term Care</h3><p>We focus on prevention and maintaining healthy smiles.</p></article>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- DENTISTS PAGE -->
+  <section class="page" id="page-dentists" data-title="Our Dentists | SmileCare Dental Clinic" data-description="Meet the experienced dentists at SmileCare Dental Clinic.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Meet Our Dentists</h1>
+        <p>Friendly professionals committed to comfortable and personalised dental care.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container team-grid">
+        <article class="team-card"><div class="team-photo"></div><div class="team-copy"><h3>Dr. Amelia Tan</h3><p>General & Cosmetic Dentist</p></div></article>
+        <article class="team-card"><div class="team-photo"></div><div class="team-copy"><h3>Dr. Daniel Lee</h3><p>Restorative Dentist</p></div></article>
+        <article class="team-card"><div class="team-photo"></div><div class="team-copy"><h3>Dr. Sophia Lim</h3><p>Orthodontic Dentist</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" style="background:#eef8f6">
+      <div class="container">
+        <div class="section-head">
+          <small>Patient Feedback</small>
+          <h2>What our patients say</h2>
+        </div>
+        <div class="review-grid">
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Friendly staff and very clear explanation. The whole visit felt comfortable.”</p><strong>Michelle K.</strong></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The clinic is clean, modern and the dentist was very gentle.”</p><strong>Jonathan L.</strong></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Easy appointment process and no hidden charges.”</p><strong>Sara M.</strong></div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section class="page" id="page-contact" data-title="Book a Dental Appointment | SmileCare Dental Clinic" data-description="Book an appointment with SmileCare Dental Clinic in Kuala Lumpur.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Book an Appointment</h1>
+        <p>Contact our team or submit your preferred appointment details below.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2 style="margin-bottom:20px">Contact Details</h2>
+          <div class="contact-list">
+            <div><strong>Phone</strong><a href="tel:+60123456789">+60 12-345 6789</a></div>
+            <div><strong>WhatsApp</strong><a href="https://wa.me/60123456789">Chat with our clinic</a></div>
+            <div><strong>Email</strong><a href="mailto:hello@smilecare.com">hello@smilecare.com</a></div>
+            <div><strong>Address</strong>25 Jalan Example, Kuala Lumpur, Malaysia</div>
+            <div><strong>Opening Hours</strong>Mon–Fri: 9 AM–6 PM<br>Sat: 9 AM–2 PM</div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2 style="margin-bottom:8px">Appointment Request</h2>
+          <p style="color:var(--muted);margin-bottom:20px">Our team will contact you to confirm availability.</p>
+          <form id="starterForm">
+            <div class="form-grid">
+              <div class="field"><label for="s-name">Full Name</label><input id="s-name" required></div>
+              <div class="field"><label for="s-phone">Phone</label><input id="s-phone" type="tel" required></div>
+              <div class="field"><label for="s-service">Service</label><select id="s-service" required><option value="">Select service</option><option>General Check-up</option><option>Scaling</option><option>Whitening</option><option>Braces</option><option>Emergency</option></select></div>
+              <div class="field"><label for="s-date">Preferred Date</label><input id="s-date" type="date" required></div>
+              <div class="field full"><label for="s-message">Message</label><textarea id="s-message" rows="4"></textarea></div>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:16px">Send Request</button>
+            <div class="success" id="starterSuccess">Thank you. Connect this demo form to your email or booking system for live submissions.</div>
+          </form>
+        </div>
+      </div>
+
+      <div class="container map">
+        <iframe src="https://www.google.com/maps?q=Kuala%20Lumpur&output=embed" loading="lazy" title="SmileCare Dental location"></iframe>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:#fff"><span class="brand-mark">🦷</span>SmileCare Dental</div>
+        <p style="margin-top:14px">Friendly family dentistry with clear advice and comfortable care.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <a class="route-link" href="#/services" data-route="services">Services</a>
+        <a class="route-link" href="#/about" data-route="about">About</a>
+        <a class="route-link" href="#/dentists" data-route="dentists">Dentists</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+60123456789">+60 12-345 6789</a>
+        <a href="mailto:hello@smilecare.com">hello@smilecare.com</a>
+        <a class="route-link" href="#/contact" data-route="contact">Book Appointment</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> SmileCare Dental Clinic.</span>
+      <span>Privacy Policy · Terms · Medical Disclaimer</span>
+    </div>
+  </div>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/60123456789" aria-label="WhatsApp">✆</a>
+
+<script>
+  const routes = ["home","services","about","dentists","contact"];
+  const pages = document.querySelectorAll(".page");
+  const routeLinks = document.querySelectorAll(".route-link");
+  const menu = document.getElementById("menu");
+  const menuToggle = document.getElementById("menuToggle");
+
+  function showRoute(route){
+    if(!routes.includes(route)) route = "home";
+    pages.forEach(page => page.classList.toggle("active", page.id === "page-" + route));
+    routeLinks.forEach(link => link.classList.toggle("active", link.dataset.route === route));
+    const activePage = document.getElementById("page-" + route);
+    document.title = activePage.dataset.title;
+    document.querySelector('meta[name="description"]').setAttribute("content", activePage.dataset.description);
+    window.scrollTo({top:0,behavior:"instant"});
+    menu.classList.remove("open");
+  }
+
+  function getRoute(){
+    return location.hash.replace("#/","") || "home";
+  }
+
+  window.addEventListener("hashchange", () => showRoute(getRoute()));
+  showRoute(getRoute());
+
+  menuToggle.addEventListener("click", () => menu.classList.toggle("open"));
+
+  const starterDate = document.getElementById("s-date");
+  starterDate.min = new Date().toISOString().split("T")[0];
+
+  document.getElementById("starterForm").addEventListener("submit", e => {
+    e.preventDefault();
+    document.getElementById("starterSuccess").style.display = "block";
+    e.target.reset();
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
