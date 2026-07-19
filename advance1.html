@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ADVANCED SEO -->
+  <title>Élan Dental Atelier | Luxury Cosmetic Dentist in Kuala Lumpur</title>
+  <meta name="description" content="Élan Dental Atelier offers premium cosmetic dentistry, veneers, dental implants, invisible aligners and digital smile design in Kuala Lumpur.">
+  <meta name="keywords" content="luxury dentist Kuala Lumpur, cosmetic dentist KL, veneers Malaysia, dental implants KL, invisible aligners, digital smile design">
+  <meta name="author" content="Élan Dental Atelier">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.example.com/">
+
+  <!-- GEO / LOCAL SEO -->
+  <meta name="geo.region" content="MY-14">
+  <meta name="geo.placename" content="Kuala Lumpur">
+  <meta name="geo.position" content="3.1390;101.6869">
+  <meta name="ICBM" content="3.1390, 101.6869">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Élan Dental Atelier">
+  <meta property="og:title" content="Élan Dental Atelier | Premium Dentistry">
+  <meta property="og:description" content="Refined cosmetic and restorative dentistry designed around your comfort and confidence.">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=90">
+  <meta property="og:image:alt" content="Premium modern dental clinic">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Élan Dental Atelier">
+  <meta name="twitter:description" content="Premium cosmetic and restorative dentistry in Kuala Lumpur.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=90">
+
+  <meta name="theme-color" content="#0c2527">
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <!-- ADVANCED STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Dentist",
+        "@id":"https://www.example.com/#clinic",
+        "name":"Élan Dental Atelier",
+        "url":"https://www.example.com/",
+        "logo":"https://www.example.com/logo.png",
+        "image":"https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=90",
+        "telephone":"+60 12-345 6789",
+        "email":"concierge@elandental.com",
+        "priceRange":"RM RM RM",
+        "medicalSpecialty":["Cosmetic Dentistry","Implant Dentistry","Orthodontics"],
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"88 Jalan Example",
+          "addressLocality":"Kuala Lumpur",
+          "postalCode":"50000",
+          "addressCountry":"MY"
+        },
+        "geo":{"@type":"GeoCoordinates","latitude":3.1390,"longitude":101.6869},
+        "openingHoursSpecification":[
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"15:00"}
+        ],
+        "sameAs":["https://www.instagram.com/","https://www.facebook.com/"],
+        "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"1248"}
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://www.example.com/#website",
+        "url":"https://www.example.com/",
+        "name":"Élan Dental Atelier",
+        "publisher":{"@id":"https://www.example.com/#clinic"}
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Do you offer digital smile previews?",
+            "acceptedAnswer":{"@type":"Answer","text":"Selected cosmetic and orthodontic cases may include digital smile simulations before treatment begins."}
+          },
+          {
+            "@type":"Question",
+            "name":"Do you provide dental implant consultations?",
+            "acceptedAnswer":{"@type":"Answer","text":"Yes. Implant consultations include clinical assessment, imaging and personalised treatment planning."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --ink:#0c2527;
+      --ink-2:#163b3d;
+      --cream:#f4efe6;
+      --paper:#fbfaf7;
+      --white:#fff;
+      --jade:#1f7a70;
+      --jade-2:#2fa395;
+      --gold:#c8a46b;
+      --muted:#718184;
+      --line:rgba(12,37,39,.12);
+      --shadow:0 28px 80px rgba(8,35,37,.16);
+      --radius:30px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+    img{display:block;width:100%}
+    .container{width:min(1240px,92%);margin:auto}
+
+    .site-nav{
+      position:fixed;
+      top:18px;left:50%;transform:translateX(-50%);
+      width:min(1200px,92%);
+      z-index:1000;
+      border:1px solid rgba(255,255,255,.5);
+      background:rgba(255,255,255,.72);
+      backdrop-filter:blur(20px);
+      border-radius:22px;
+      box-shadow:0 18px 55px rgba(8,35,37,.13);
+    }
+    .nav-inner{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding:0 18px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:24px;font-weight:700;
+    }
+    .brand-mark{
+      width:44px;height:44px;border-radius:50%;
+      display:grid;place-items:center;
+      color:#fff;background:linear-gradient(145deg,var(--jade),#5dc2b4);
+      box-shadow:inset 0 0 0 5px rgba(255,255,255,.16);
+    }
+    .menu{display:flex;align-items:center;gap:23px;font-size:14px;font-weight:800}
+    .menu a{position:relative;padding:27px 0}
+    .menu a.active{color:var(--jade)}
+    .menu a.active::after{
+      content:"";position:absolute;left:0;right:0;bottom:15px;
+      height:2px;background:var(--gold)
+    }
+    .menu-toggle{display:none;border:0;background:none;font-size:29px;cursor:pointer}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:10px;border:0;border-radius:999px;
+      padding:15px 24px;font-weight:900;cursor:pointer;transition:.3s ease
+    }
+    .btn-primary{background:var(--jade);color:#fff;box-shadow:0 14px 30px rgba(31,122,112,.25)}
+    .btn-primary:hover{transform:translateY(-3px);background:#175f58}
+    .btn-light{background:#fff;border:1px solid var(--line)}
+    .btn-light:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .btn-dark{background:var(--ink);color:#fff}
+
+    main{min-height:75vh}
+    .page{display:none;animation:pageIn .45s ease}
+    .page.active{display:block}
+    @keyframes pageIn{
+      from{opacity:0;transform:translateY(14px)}
+      to{opacity:1;transform:none}
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;
+      padding:135px 0 80px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 12% 22%,rgba(47,163,149,.22),transparent 30%),
+        radial-gradient(circle at 88% 18%,rgba(200,164,107,.2),transparent 25%),
+        linear-gradient(135deg,#f8f4eb,#e8f3ee);
+    }
+    .hero::before,.hero::after{
+      content:"";
+      position:absolute;border-radius:50%;
+      animation:float 8s ease-in-out infinite;
+    }
+    .hero::before{
+      width:240px;height:240px;right:-70px;top:120px;
+      border:1px solid rgba(31,122,112,.18);
+    }
+    .hero::after{
+      width:130px;height:130px;left:4%;bottom:6%;
+      background:rgba(255,255,255,.46);animation-delay:-3s
+    }
+    @keyframes float{50%{transform:translateY(-18px) translateX(10px)}}
+
+    .hero-grid{
+      display:grid;grid-template-columns:1.08fr .92fr;
+      align-items:center;gap:70px;position:relative;z-index:1
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      color:var(--jade);font-size:12px;font-weight:900;
+      text-transform:uppercase;letter-spacing:2px;margin-bottom:18px
+    }
+    .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+    .hero h1,.page-banner h1,.section-title{
+      font-family:Georgia,"Times New Roman",serif;
+      line-height:.98;letter-spacing:-2px
+    }
+    .hero h1{font-size:clamp(58px,8vw,102px);margin-bottom:27px}
+    .hero h1 em{color:var(--jade);font-weight:400}
+    .hero p{font-size:19px;color:var(--muted);max-width:650px;margin-bottom:32px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:35px}
+    .proof{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .proof strong{display:block}
+    .proof span{color:var(--muted);font-size:13px}
+
+    .hero-visual{position:relative;max-width:560px;margin-left:auto}
+    .arch{
+      padding:15px;border-radius:190px 190px 35px 35px;
+      background:rgba(255,255,255,.58);
+      border:1px solid rgba(255,255,255,.86);
+      backdrop-filter:blur(12px);
+      box-shadow:var(--shadow)
+    }
+    .hero-photo{
+      min-height:660px;border-radius:180px 180px 25px 25px;
+      background:
+        linear-gradient(to top,rgba(8,36,38,.22),transparent 44%),
+        url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1300&q=90") center/cover
+    }
+    .float-card{
+      position:absolute;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,.9);
+      border-radius:18px;padding:16px 18px;
+      box-shadow:0 20px 50px rgba(8,35,37,.18)
+    }
+    .float-card.rating{left:-45px;bottom:85px}
+    .float-card.tech{right:-35px;top:170px}
+    .float-card strong{display:block;font-size:19px}
+    .float-card span{font-size:13px;color:var(--muted)}
+
+    .section{padding:112px 0}
+    .section-title{font-size:clamp(42px,6vw,70px);margin-bottom:22px}
+    .section-copy{color:var(--muted);font-size:17px;max-width:700px}
+
+    .stats{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      background:#fff;border-radius:24px;overflow:hidden;
+      box-shadow:var(--shadow);margin-top:-42px;position:relative;z-index:3
+    }
+    .stat{text-align:center;padding:31px;border-right:1px solid var(--line)}
+    .stat:last-child{border-right:0}
+    .stat strong{
+      display:block;color:var(--jade);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:38px;line-height:1;margin-bottom:8px
+    }
+    .stat span{color:var(--muted);font-size:13px}
+
+    .intro-grid,.split,.contact-grid{
+      display:grid;grid-template-columns:.9fr 1.1fr;
+      gap:76px;align-items:center
+    }
+    .intro-image,.feature-image{
+      min-height:590px;border-radius:var(--radius);
+      box-shadow:var(--shadow);position:relative;overflow:hidden
+    }
+    .intro-image{
+      background:url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=90") center/cover
+    }
+    .feature-image{
+      background:url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=90") center/cover
+    }
+    .image-note{
+      position:absolute;left:24px;right:24px;bottom:24px;
+      padding:22px;border-radius:20px;color:#fff;
+      background:rgba(10,53,55,.78);backdrop-filter:blur(14px)
+    }
+
+    .benefits{
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:16px;margin:32px 0
+    }
+    .benefit{
+      background:#fff;border:1px solid var(--line);
+      border-radius:18px;padding:20px
+    }
+    .benefit strong{display:block;margin-bottom:5px}
+    .benefit span{color:var(--muted);font-size:14px}
+
+    .page-banner{
+      padding:165px 0 90px;
+      color:#fff;text-align:center;
+      background:
+        radial-gradient(circle at 15% 30%,rgba(47,163,149,.25),transparent 28%),
+        linear-gradient(135deg,var(--ink),var(--ink-2))
+    }
+    .page-banner h1{font-size:clamp(52px,7vw,88px);margin-bottom:16px}
+    .page-banner p{max-width:700px;margin:auto;color:#bfd0d1;font-size:18px}
+
+    .treatment-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:22px;margin-top:48px
+    }
+    .treatment{
+      min-height:430px;border-radius:26px;overflow:hidden;
+      position:relative;transition:.35s ease;background:#174446
+    }
+    .treatment:hover{transform:translateY(-9px)}
+    .treatment::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(6,30,31,.94),transparent 72%)
+    }
+    .treatment:nth-child(1){background:url("https://images.unsplash.com/photo-1606265752439-1f18756aa376?auto=format&fit=crop&w=900&q=88") center/cover}
+    .treatment:nth-child(2){background:url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=88") center/cover}
+    .treatment:nth-child(3){background:url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=88") center/cover}
+    .treatment:nth-child(4){background:url("https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=900&q=88") center/cover}
+    .treatment:nth-child(5){background:url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=88") center/cover}
+    .treatment:nth-child(6){background:url("https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&w=900&q=88") center/cover}
+    .treatment-copy{
+      position:absolute;z-index:2;left:26px;right:26px;bottom:26px;color:#fff
+    }
+    .treatment-copy small{color:#a8d8d2;letter-spacing:1.5px;text-transform:uppercase}
+    .treatment-copy h3{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:31px;margin:5px 0 8px
+    }
+    .treatment-copy p{color:#d6e3e3;font-size:14px}
+
+    .doctor-grid,.review-grid,.process-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:22px;margin-top:48px
+    }
+    .doctor-card,.review-card,.process-card{
+      background:#fff;border:1px solid var(--line);
+      border-radius:24px;overflow:hidden;
+      box-shadow:0 18px 48px rgba(8,35,37,.08)
+    }
+    .doctor-photo{min-height:430px;background-position:center top;background-size:cover}
+    .doctor-card:nth-child(1) .doctor-photo{background-image:url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=88")}
+    .doctor-card:nth-child(2) .doctor-photo{background-image:url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=88")}
+    .doctor-card:nth-child(3) .doctor-photo{background-image:url("https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=88")}
+    .doctor-copy,.review-card,.process-card{padding:26px}
+    .doctor-copy h3{font-family:Georgia,"Times New Roman",serif;font-size:26px}
+    .doctor-copy p{color:var(--jade);font-weight:800;font-size:14px;margin:6px 0 10px}
+    .doctor-copy span,.review-card p,.process-card p{color:var(--muted);font-size:14px}
+    .stars{color:#c89b4d;letter-spacing:3px;margin-bottom:14px}
+
+    .tech-list{display:grid;gap:14px;margin-top:30px}
+    .tech-item{
+      display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:center;
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px
+    }
+    .tech-icon{
+      width:54px;height:54px;border-radius:15px;
+      display:grid;place-items:center;background:#e1f3ef;font-size:23px
+    }
+    .tech-item p{color:var(--muted);font-size:14px}
+
+    .comparison{
+      position:relative;min-height:570px;border-radius:var(--radius);
+      overflow:hidden;box-shadow:var(--shadow);
+      background:url("https://images.unsplash.com/photo-1606265752439-1f18756aa376?auto=format&fit=crop&w=1200&q=88") center/cover
+    }
+    .after-layer{position:absolute;inset:0;width:50%;overflow:hidden;border-right:3px solid #fff}
+    .after-layer div{
+      width:100vw;max-width:760px;height:100%;
+      background:url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=88") center/cover
+    }
+    .compare-label{
+      position:absolute;top:18px;z-index:3;
+      background:rgba(8,35,37,.78);color:#fff;
+      border-radius:999px;padding:8px 13px;font-size:12px;font-weight:900
+    }
+    .compare-label.before{right:18px}.compare-label.after{left:18px}
+    .slider{width:100%;margin-top:24px;accent-color:var(--jade)}
+
+    .faq-list{display:grid;gap:12px;margin-top:30px}
+    .faq-item{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#fff}
+    .faq-q{
+      width:100%;display:flex;justify-content:space-between;gap:15px;
+      background:transparent;border:0;padding:19px;text-align:left;
+      font-weight:900;cursor:pointer
+    }
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted)}
+    .faq-a p{padding:0 19px 19px}
+    .faq-item.active .faq-a{max-height:180px}
+
+    .contact-card,.booking-card{
+      background:#fff;border:1px solid var(--line);
+      border-radius:28px;padding:34px;box-shadow:var(--shadow)
+    }
+    .contact-list{display:grid;gap:18px;color:var(--muted)}
+    .contact-list strong{display:block;color:var(--ink)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:grid;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-weight:900;font-size:13px}
+    .field input,.field select,.field textarea{
+      width:100%;padding:13px 14px;border-radius:13px;
+      border:1px solid var(--line);background:#fcfdfc;outline:none
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      border-color:var(--jade);box-shadow:0 0 0 3px rgba(31,122,112,.1)
+    }
+    .success{
+      display:none;margin-top:14px;padding:12px;border-radius:12px;
+      background:#e1f3ef;color:#175f58;font-weight:800;font-size:14px
+    }
+    .map{margin-top:30px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .map iframe{width:100%;height:430px;border:0}
+
+    footer{background:#071f20;color:#d7e4e4;padding:58px 0 28px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;margin-bottom:42px}
+    .footer-grid p,.footer-grid a{color:#9db4b5}
+    .footer-grid a{display:block;margin:8px 0}
+    .footer-bottom{
+      padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      color:#8da6a7;font-size:13px
+    }
+
+    .floating-actions{
+      position:fixed;right:20px;bottom:20px;z-index:999;
+      display:grid;gap:10px
+    }
+    .float-btn{
+      width:58px;height:58px;border-radius:50%;
+      display:grid;place-items:center;color:#fff;font-size:23px;
+      box-shadow:0 15px 38px rgba(0,0,0,.22)
+    }
+    .phone{background:var(--jade)}.whatsapp{background:#25d366}
+
+    .reveal{opacity:0;transform:translateY(35px);transition:.8s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:1050px){
+      .menu{
+        position:absolute;top:84px;left:0;right:0;
+        display:none;flex-direction:column;align-items:flex-start;
+        background:#fff;border-radius:18px;padding:20px;
+        box-shadow:var(--shadow)
+      }
+      .menu.open{display:flex}
+      .menu a{padding:8px 0}
+      .menu a.active::after{display:none}
+      .menu-toggle{display:block}
+      .nav-cta{display:none}
+      .hero-grid,.intro-grid,.split,.contact-grid{grid-template-columns:1fr}
+      .hero-visual{margin:auto;width:min(100%,620px)}
+      .treatment-grid,.doctor-grid,.review-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:720px){
+      .site-nav{top:10px}
+      .nav-inner{min-height:64px}
+      .brand{font-size:19px}
+      .brand-mark{width:38px;height:38px}
+      .hero{padding-top:115px}
+      .hero h1{letter-spacing:-2px}
+      .hero-photo{min-height:510px}
+      .float-card.rating{left:8px;bottom:40px}
+      .float-card.tech{right:8px;top:115px}
+      .section{padding:78px 0}
+      .stats,.benefits,.treatment-grid,.doctor-grid,.review-grid,.process-grid,.form-grid,.footer-grid{grid-template-columns:1fr}
+      .stat{border-right:0;border-bottom:1px solid var(--line)}
+      .stat:last-child{border-bottom:0}
+      .field.full{grid-column:auto}
+      .comparison{min-height:430px}
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand route-link" href="#/home" data-route="home">
+      <span class="brand-mark">É</span>
+      Élan Dental
+    </a>
+
+    <nav class="menu" id="advMenu">
+      <a class="route-link" href="#/home" data-route="home">Home</a>
+      <a class="route-link" href="#/treatments" data-route="treatments">Treatments</a>
+      <a class="route-link" href="#/atelier" data-route="atelier">The Atelier</a>
+      <a class="route-link" href="#/dentists" data-route="dentists">Dentists</a>
+      <a class="route-link" href="#/smiles" data-route="smiles">Smile Gallery</a>
+      <a class="route-link" href="#/contact" data-route="contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary nav-cta route-link" href="#/contact" data-route="contact">Private Consultation</a>
+    <button class="menu-toggle" id="advToggle" aria-label="Open navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section class="page active" id="page-home" data-title="Élan Dental Atelier | Luxury Cosmetic Dentist in Kuala Lumpur" data-description="Premium cosmetic, restorative and implant dentistry in Kuala Lumpur.">
+    <div class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">A refined approach to dentistry</div>
+          <h1>Where clinical precision meets <em>beautiful design.</em></h1>
+          <p>Advanced cosmetic and restorative dentistry in a private, hospitality-led environment created around your comfort and confidence.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary route-link" href="#/contact" data-route="contact">Plan Your Smile</a>
+            <a class="btn btn-light route-link" href="#/treatments" data-route="treatments">Explore Treatments</a>
+          </div>
+          <div class="proof">
+            <div><strong>4.9/5 patient rating</strong><span>Based on 1,200+ patient reviews</span></div>
+            <div><strong>15+ years</strong><span>Clinical experience</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="arch"><div class="hero-photo"></div></div>
+          <div class="float-card rating"><strong>★★★★★ 4.9</strong><span>Google patient rating</span></div>
+          <div class="float-card tech"><strong>3D Smile Design</strong><span>Preview your planned result</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container stats reveal">
+      <div class="stat"><strong data-count="15">0</strong><span>Years of Excellence</span></div>
+      <div class="stat"><strong data-count="12000">0</strong><span>Smiles Cared For</span></div>
+      <div class="stat"><strong data-count="24">0</strong><span>Premium Treatments</span></div>
+      <div class="stat"><strong data-count="98">0</strong><span>Patient Satisfaction</span></div>
+    </div>
+
+    <section class="section">
+      <div class="container intro-grid">
+        <div class="intro-image reveal">
+          <div class="image-note"><strong>Designed for calm.</strong><p>Private rooms, gentle care and a concierge-style patient experience.</p></div>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Welcome to Élan</div>
+          <h2 class="section-title">A more thoughtful dental experience.</h2>
+          <p class="section-copy">We unite advanced technology, precise clinical care and refined aesthetics to create treatment that feels personal, transparent and beautifully considered.</p>
+          <div class="benefits">
+            <div class="benefit"><strong>Personalised Planning</strong><span>Every detail designed around your goals.</span></div>
+            <div class="benefit"><strong>Digital Precision</strong><span>Advanced scanning and guided treatment.</span></div>
+            <div class="benefit"><strong>Private Comfort</strong><span>A calm, hospitality-led environment.</span></div>
+            <div class="benefit"><strong>Natural Results</strong><span>Subtle, elegant and long-lasting outcomes.</span></div>
+          </div>
+          <a class="btn btn-primary route-link" href="#/atelier" data-route="atelier">Discover The Atelier</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section class="page" id="page-treatments" data-title="Cosmetic & Implant Dentistry | Élan Dental Atelier" data-description="Explore smile design, veneers, dental implants, aligners, whitening and restorative dentistry at Élan Dental Atelier.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Signature Treatments</h1>
+        <p>Comprehensive cosmetic, restorative and implant care delivered with precision and artistry.</p>
+      </div>
+    </div>
+    <section class="section" style="background:var(--ink);color:#fff">
+      <div class="container">
+        <div class="eyebrow" style="color:#8fd7ce">Our Expertise</div>
+        <h2 class="section-title">Complete care, one refined experience.</h2>
+        <div class="treatment-grid">
+          <article class="treatment"><div class="treatment-copy"><small>Cosmetic</small><h3>Digital Smile Design</h3><p>Preview and plan a naturally balanced smile before treatment begins.</p></div></article>
+          <article class="treatment"><div class="treatment-copy"><small>Restorative</small><h3>Dental Implants</h3><p>Digitally guided tooth replacement with a focus on long-term function.</p></div></article>
+          <article class="treatment"><div class="treatment-copy"><small>Orthodontics</small><h3>Invisible Aligners</h3><p>Discreet teeth straightening designed around your lifestyle.</p></div></article>
+          <article class="treatment"><div class="treatment-copy"><small>Aesthetic</small><h3>Porcelain Veneers</h3><p>Custom ceramic restorations for refined, natural-looking results.</p></div></article>
+          <article class="treatment"><div class="treatment-copy"><small>Enhancement</small><h3>Teeth Whitening</h3><p>Professional whitening options for a brighter, more even smile.</p></div></article>
+          <article class="treatment"><div class="treatment-copy"><small>Comprehensive</small><h3>Full-Mouth Restoration</h3><p>Advanced planning to restore comfort, confidence and function.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Your Journey</div>
+        <h2 class="section-title">Clear, considered and carefully planned.</h2>
+        <div class="process-grid">
+          <article class="process-card"><h3>01 — Consultation</h3><p>We listen to your concerns, goals and previous experience.</p></article>
+          <article class="process-card"><h3>02 — Digital Assessment</h3><p>Advanced scans and imaging support accurate diagnosis.</p></article>
+          <article class="process-card"><h3>03 — Personal Plan</h3><p>Receive transparent options, timing and estimated pricing.</p></article>
+          <article class="process-card"><h3>04 — Treatment</h3><p>Comfort-focused treatment using precise digital techniques.</p></article>
+          <article class="process-card"><h3>05 — Aftercare</h3><p>Long-term guidance to protect your smile and maintain results.</p></article>
+          <article class="process-card"><h3>06 — Review</h3><p>Ongoing follow-up to monitor comfort, health and aesthetics.</p></article>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ATELIER -->
+  <section class="page" id="page-atelier" data-title="The Élan Dental Atelier | Premium Dental Experience" data-description="Discover the technology, comfort and patient experience at Élan Dental Atelier.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>The Atelier</h1>
+        <p>A calm, private environment where every detail supports better care.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container split">
+        <div class="feature-image reveal"></div>
+        <div class="reveal">
+          <div class="eyebrow">Technology & Comfort</div>
+          <h2 class="section-title">Precision without compromise.</h2>
+          <p class="section-copy">Our digital workflow supports clearer diagnosis, more accurate planning and a more comfortable experience.</p>
+          <div class="tech-list">
+            <div class="tech-item"><div class="tech-icon">◫</div><div><strong>3D Intraoral Scanner</strong><p>Comfortable digital impressions without traditional moulds.</p></div></div>
+            <div class="tech-item"><div class="tech-icon">◎</div><div><strong>Digital X-Ray</strong><p>Fast and precise imaging with reduced exposure.</p></div></div>
+            <div class="tech-item"><div class="tech-icon">✦</div><div><strong>Smile Simulation</strong><p>Visualise selected treatment outcomes before beginning.</p></div></div>
+            <div class="tech-item"><div class="tech-icon">⌁</div><div><strong>Guided Implant Planning</strong><p>Digitally planned implant treatment for predictable results.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- DENTISTS -->
+  <section class="page" id="page-dentists" data-title="Our Cosmetic Dentists | Élan Dental Atelier" data-description="Meet the cosmetic, implant and orthodontic dentists at Élan Dental Atelier.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Our Clinicians</h1>
+        <p>Advanced expertise, thoughtful communication and a calm approach to care.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="doctor-grid">
+          <article class="doctor-card reveal"><div class="doctor-photo"></div><div class="doctor-copy"><h3>Dr. Amelia Tan</h3><p>Cosmetic & Restorative Dentist</p><span>15 years of experience in smile design, veneers and complex restoration.</span></div></article>
+          <article class="doctor-card reveal"><div class="doctor-photo"></div><div class="doctor-copy"><h3>Dr. Daniel Lee</h3><p>Implant & Oral Surgery Dentist</p><span>Focused on digitally guided implants and comfort-led surgical care.</span></div></article>
+          <article class="doctor-card reveal"><div class="doctor-photo"></div><div class="doctor-copy"><h3>Dr. Sophia Lim</h3><p>Orthodontic Dentist</p><span>Experienced in clear aligners, braces and adult bite correction.</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#edf5f1">
+      <div class="container">
+        <div class="eyebrow">Patient Stories</div>
+        <h2 class="section-title">Trusted by patients who value quality.</h2>
+        <div class="review-grid">
+          <article class="review-card"><div class="stars">★★★★★</div><p>“Everything felt calm, premium and extremely well explained.”</p><strong>Michelle K.</strong></article>
+          <article class="review-card"><div class="stars">★★★★★</div><p>“The digital planning made my implant treatment much easier to understand.”</p><strong>Jonathan L.</strong></article>
+          <article class="review-card"><div class="stars">★★★★★</div><p>“Beautiful clinic, professional team and a very natural result.”</p><strong>Sara M.</strong></article>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- SMILES -->
+  <section class="page" id="page-smiles" data-title="Smile Gallery | Élan Dental Atelier" data-description="Explore an interactive example of smile transformation at Élan Dental Atelier.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Smile Gallery</h1>
+        <p>Explore what thoughtful planning and precise treatment can achieve.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Before & After</div>
+          <h2 class="section-title">Designed for a natural, confident result.</h2>
+          <p class="section-copy">Drag the slider to compare the transformation. Replace these demo images with approved patient photography before launch.</p>
+          <input class="slider" id="smileSlider" type="range" min="0" max="100" value="50">
+        </div>
+        <div class="comparison">
+          <span class="compare-label before">Before</span>
+          <span class="compare-label after">After</span>
+          <div class="after-layer" id="afterLayer"><div></div></div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="page" id="page-contact" data-title="Book a Private Dental Consultation | Élan Dental Atelier" data-description="Request a private cosmetic, implant or orthodontic consultation at Élan Dental Atelier in Kuala Lumpur.">
+    <div class="page-banner">
+      <div class="container">
+        <h1>Private Consultation</h1>
+        <p>Begin with a calm, personalised conversation about your smile and goals.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <div class="contact-card">
+            <div class="eyebrow">Visit Élan</div>
+            <h2 style="font-family:Georgia,serif;font-size:38px;margin-bottom:20px">Élan Dental Atelier</h2>
+            <div class="contact-list">
+              <div><strong>Address</strong>88 Jalan Example, Kuala Lumpur, Malaysia</div>
+              <div><strong>Phone</strong><a href="tel:+60123456789">+60 12-345 6789</a></div>
+              <div><strong>Email</strong><a href="mailto:concierge@elandental.com">concierge@elandental.com</a></div>
+              <div><strong>Opening Hours</strong>Mon–Fri: 9 AM–7 PM<br>Sat–Sun: 9 AM–3 PM</div>
+              <div><strong>Parking</strong>Complimentary patient parking available.</div>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item"><button class="faq-q">Do you accept new patients?<span>+</span></button><div class="faq-a"><p>Yes. New patients are welcome for cosmetic, implant, orthodontic and general consultations.</p></div></div>
+            <div class="faq-item"><button class="faq-q">Do you offer digital smile previews?<span>+</span></button><div class="faq-a"><p>Selected cases may include digital simulations to help you visualise the planned result.</p></div></div>
+            <div class="faq-item"><button class="faq-q">Are payment plans available?<span>+</span></button><div class="faq-a"><p>Flexible staged payments may be available for selected treatments, subject to clinic terms.</p></div></div>
+          </div>
+        </div>
+
+        <div class="booking-card">
+          <h2 style="font-family:Georgia,serif;font-size:40px;margin-bottom:8px">Request Your Consultation</h2>
+          <p style="color:var(--muted);margin-bottom:24px">Our concierge team will contact you to confirm your preferred time.</p>
+          <form id="advancedForm">
+            <div class="form-grid">
+              <div class="field"><label for="a-name">Full Name</label><input id="a-name" required></div>
+              <div class="field"><label for="a-phone">Phone Number</label><input id="a-phone" type="tel" required></div>
+              <div class="field"><label for="a-treatment">Treatment Interest</label><select id="a-treatment" required><option value="">Select treatment</option><option>Digital Smile Design</option><option>Porcelain Veneers</option><option>Dental Implants</option><option>Invisible Aligners</option><option>Teeth Whitening</option><option>Full-Mouth Restoration</option></select></div>
+              <div class="field"><label for="a-date">Preferred Date</label><input id="a-date" type="date" required></div>
+              <div class="field full"><label for="a-message">Tell Us About Your Goals</label><textarea id="a-message" rows="5"></textarea></div>
+            </div>
+            <button class="btn btn-primary" type="submit" style="width:100%;margin-top:17px">Request Private Consultation</button>
+            <div class="success" id="advancedSuccess">Thank you. Connect this form to your CRM, email or booking platform for live submissions.</div>
+          </form>
+        </div>
+      </div>
+
+      <div class="container map">
+        <iframe src="https://www.google.com/maps?q=Kuala%20Lumpur&output=embed" loading="lazy" title="Élan Dental Atelier location"></iframe>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand route-link" href="#/home" data-route="home" style="color:#fff"><span class="brand-mark">É</span>Élan Dental</a>
+        <p style="margin-top:16px">Refined cosmetic and restorative dentistry designed around comfort, precision and natural results.</p>
+      </div>
+      <div><h3>Explore</h3><a class="route-link" href="#/atelier" data-route="atelier">The Atelier</a><a class="route-link" href="#/dentists" data-route="dentists">Our Dentists</a><a class="route-link" href="#/smiles" data-route="smiles">Smile Gallery</a></div>
+      <div><h3>Treatments</h3><a class="route-link" href="#/treatments" data-route="treatments">Smile Design</a><a class="route-link" href="#/treatments" data-route="treatments">Veneers</a><a class="route-link" href="#/treatments" data-route="treatments">Implants</a><a class="route-link" href="#/treatments" data-route="treatments">Aligners</a></div>
+      <div><h3>Contact</h3><a href="tel:+60123456789">+60 12-345 6789</a><a href="mailto:concierge@elandental.com">Email Concierge</a><a class="route-link" href="#/contact" data-route="contact">Book Consultation</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="advYear"></span> Élan Dental Atelier.</span><span>Privacy · Terms · Medical Disclaimer</span></div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a class="float-btn phone" href="tel:+60123456789" aria-label="Call clinic">☎</a>
+  <a class="float-btn whatsapp" href="https://wa.me/60123456789" aria-label="WhatsApp clinic">✆</a>
+</div>
+
+<script>
+  const routes = ["home","treatments","atelier","dentists","smiles","contact"];
+  const pages = document.querySelectorAll(".page");
+  const links = document.querySelectorAll(".route-link");
+  const menu = document.getElementById("advMenu");
+  const toggle = document.getElementById("advToggle");
+
+  function showRoute(route){
+    if(!routes.includes(route)) route = "home";
+    pages.forEach(page => page.classList.toggle("active", page.id === "page-" + route));
+    links.forEach(link => link.classList.toggle("active", link.dataset.route === route));
+    const page = document.getElementById("page-" + route);
+    document.title = page.dataset.title;
+    document.querySelector('meta[name="description"]').setAttribute("content", page.dataset.description);
+    window.scrollTo({top:0,behavior:"instant"});
+    menu.classList.remove("open");
+    setTimeout(revealVisible, 50);
+  }
+
+  function currentRoute(){return location.hash.replace("#/","") || "home"}
+  window.addEventListener("hashchange",()=>showRoute(currentRoute()));
+  showRoute(currentRoute());
+
+  toggle.addEventListener("click",()=>menu.classList.toggle("open"));
+
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12});
+
+  function revealVisible(){
+    document.querySelectorAll(".page.active .reveal:not(.visible)").forEach(el=>observer.observe(el));
+  }
+  revealVisible();
+
+  document.querySelectorAll("[data-count]").forEach(el=>{
+    const countObserver = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        const target=Number(el.dataset.count);
+        const start=performance.now();
+        function animate(now){
+          const p=Math.min((now-start)/1200,1);
+          const value=Math.floor(target*p);
+          el.textContent=target>=1000?value.toLocaleString()+"+":value+(target===98?"%":"+");
+          if(p<1)requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+        countObserver.unobserve(el);
+      });
+    },{threshold:.7});
+    countObserver.observe(el);
+  });
+
+  const slider=document.getElementById("smileSlider");
+  const after=document.getElementById("afterLayer");
+  slider.addEventListener("input",e=>after.style.width=e.target.value+"%");
+
+  document.querySelectorAll(".faq-q").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const item=btn.parentElement;
+      item.classList.toggle("active");
+      btn.querySelector("span").textContent=item.classList.contains("active")?"−":"+";
+    });
+  });
+
+  const advDate=document.getElementById("a-date");
+  advDate.min=new Date().toISOString().split("T")[0];
+
+  document.getElementById("advancedForm").addEventListener("submit",e=>{
+    e.preventDefault();
+    document.getElementById("advancedSuccess").style.display="block";
+    e.target.reset();
+  });
+
+  document.getElementById("advYear").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
