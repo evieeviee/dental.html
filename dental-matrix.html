@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORALIS MINT // Next-Gen Advanced Restorative & Digital Smile Aesthetics</title>
+    
+    <!-- Premium UI Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Clinical Location Metadata -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "ORALIS MINT Premium Dental Care",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200",
+      "priceRange": "MYR$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Level 3, North Block, Pavilion Tower, Bukit Bintang",
+        "addressLocality": "Kuala Lumpur",
+        "addressRegion": "WPKL",
+        "postalCode": "55100",
+        "addressCountry": "MY"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-base: #080b11;
+            --glass-card: rgba(18, 24, 38, 0.6);
+            --glass-border: rgba(45, 212, 191, 0.15);
+            --neon-teal: #2dd4bf;
+            --neon-blue: #38bdf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --wa-brand: #25D366;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 15% 75%, rgba(45, 212, 191, 0.06) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .ambient-glow { position: absolute; width: 450px; height: 450px; background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%); top: -50px; left: -100px; pointer-events: none; z-index: 0; }
+
+        .wrapper { max-width: 1300px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; }
+
+        /* Navigation Module */
+        nav {
+            position: sticky; top: 16px; z-index: 1000;
+            background: var(--glass-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 18px 32px;
+            margin-top: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; background: linear-gradient(90deg, #fff, var(--neon-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; letter-spacing: 2px; }
+        
+        .status-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.25); padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-family: var(--font-display); text-transform: uppercase; color: var(--neon-teal); letter-spacing: 1px; }
+        .status-dot { width: 6px; height: 6px; background: var(--neon-teal); border-radius: 50%; box-shadow: 0 0 10px var(--neon-teal); animation: blink 2.5s infinite ease-in-out; }
+        @keyframes blink { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+        /* Hero Graphic Display Section */
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; padding: 80px 0; align-items: center; }
+        .hero-content h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.5rem, 4.5vw, 4.2rem); line-height: 1.1; margin: 20px 0; }
+        .hero-content h1 span { background: linear-gradient(90deg, var(--neon-teal), var(--neon-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-content p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 36px; max-width: 580px; }
+
+        .ui-graphic-frame { position: relative; }
+        .ui-graphic-frame::before { content: ''; position: absolute; width: 100%; height: 100%; border: 1px solid var(--neon-teal); opacity: 0.2; top: 16px; left: 16px; border-radius: 28px; pointer-events: none; }
+        .hero-image { width: 100%; height: 480px; object-fit: cover; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 2; }
+
+        /* Premium Clinical Database Section */
+        .database-section { padding: 40px 0 80px 0; }
+        .sub-tag { font-family: var(--font-display); text-transform: uppercase; color: var(--neon-blue); letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 12px; display: block; }
+        .main-title { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; margin-bottom: 48px; }
+
+        .treatment-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; }
+        .matrix-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 24px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 16px; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .matrix-row:hover { background: rgba(45, 212, 191, 0.05); border-color: rgba(45, 212, 191, 0.3); transform: translateY(-3px); }
+        .matrix-info h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 6px; color: #fff; }
+        .matrix-info p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; max-width: 290px; }
+        .matrix-cost { font-family: var(--font-display); font-size: 1.25rem; color: var(--neon-teal); font-weight: 700; }
+
+        /* Interactive Calculation Form Module */
+        .terminal-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
+        .glass-terminal-card { background: var(--glass-card); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 36px; box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
+        
+        .field-wrap { margin-bottom: 24px; }
+        .field-wrap label { display: block; font-family: var(--font-display); font-size: 0.75rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 8px; letter-spacing: 1px; }
+        .input-element, .select-element { width: 100%; background: rgba(5, 7, 12, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 14px 18px; font-family: inherit; color: #fff; font-size: 0.95rem; outline: none; transition: all 0.3s; }
+        .input-element:focus, .select-element:focus { border-color: var(--neon-teal); box-shadow: 0 0 12px rgba(45, 212, 191, 0.2); }
+
+        /* Realtime Digital Invoice Summary Ledger */
+        .ledger-box { background: rgba(5, 7, 12, 0.5); border: 1px dashed rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; margin-bottom: 28px; }
+        .ledger-line { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem; color: var(--text-secondary); }
+        .ledger-line.total-line { margin-bottom: 0; padding-top: 14px; border-top: 1px dashed rgba(255,255,255,0.1); font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--neon-teal); }
+
+        .btn-action-relay { width: 100%; background: linear-gradient(90deg, var(--neon-teal), var(--neon-blue)); color: #080b11; border: none; padding: 18px; border-radius: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px; transition: all 0.3s; }
+        .btn-action-relay:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(45, 212, 191, 0.3); filter: brightness(1.05); }
+
+        footer { margin-top: 80px; padding: 32px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: var(--text-secondary); font-size: 0.8rem; letter-spacing: 0.5px; }
+
+        @media(max-width: 992px) {
+            .hero-grid, .terminal-grid { grid-template-columns: 1fr; }
+            .hero-image { height: 320px; }
+            .treatment-matrix { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="wrapper">
+        <!-- APP HEADER BAR -->
+        <nav>
+            <div class="nav-flex">
+                <a href="#" class="nav-logo">ORALIS MINT</a>
+                <div class="status-pill">
+                    <span class="status-dot"></span> KKM Approved System
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- MAIN HERO FRAME -->
+            <section class="hero-grid">
+                <div class="hero-content">
+                    <span class="status-pill" style="color:var(--neon-blue); border-color:rgba(56,189,248,0.2);">Digital Diagnostics</span>
+                    <h1>Advanced Dental <span>Architecture.</span></h1>
+                    <p>Experience precise, microscopic restorative oral architecture and digital smile styling workflows. Driven by AI diagnostic arrays and modern 3D panoramic imaging arrays right in Kuala Lumpur.</p>
+                    <a href="#configure" class="btn-action-relay" style="max-width: 260px; text-decoration: none;">Launch Treatment Configurator</a>
+                </div>
+                <div class="ui-graphic-frame">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Advanced Clinical Dental Operations Space" class="hero-image">
+                </div>
+            </section>
+
+            <!-- TREATMENT MATRIX / TRACK DATA -->
+            <section class="database-section">
+                <span class="sub-tag">// Clinical Track Directory</span>
+                <h2 class="main-title">Transparent Standard Base Pricing Matrix</h2>
+                
+                <div class="treatment-matrix">
+                    <div class="matrix-row">
+                        <div class="matrix-info">
+                            <h4>Scaling, Polishing & Airflow</h4>
+                            <p>Premium 3-in-1 stain removal, surface whitening polish, and full deep gum pocket assessment.</p>
+                        </div>
+                        <span class="matrix-cost">RM 150</span>
+                    </div>
+                    <div class="matrix-row">
+                        <div class="matrix-info">
+                            <h4>Composite Aesthetic Filling</h4>
+                            <p>High-density, multi-layered biocompatible composite resin matched perfectly to your enamel tone.</p>
+                        </div>
+                        <span class="matrix-cost">RM 200</span>
+                    </div>
+                    <div class="matrix-row">
+                        <div class="matrix-info">
+                            <h4>Surgical Wisdom Tooth Extraction</h4>
+                            <p>Micro-incision clinical removal of impacted lower wisdom structures including minor suturing arrays.</p>
+                        </div>
+                        <span class="matrix-cost">RM 950</span>
+                    </div>
+                    <div class="matrix-row">
+                        <div class="matrix-info">
+                            <h4>Premium Zirconia Crown</h4>
+                            <p>Monolithic computer-milled metal-free biological structural replacement unit for broken crowns.</p>
+                        </div>
+                        <span class="matrix-cost">RM 1,500</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMPUTATION ENGINE FORM -->
+            <section class="database-section" id="configure" style="padding-top: 0;">
+                <span class="sub-tag">// Interactive Configuration Node</span>
+                <h2 class="main-title">Calculate and Lock Appointment Slot</h2>
+
+                <div class="glass-terminal-card terminal-grid">
+                    <div>
+                        <form id="dentEngineForm">
+                            <div class="field-wrap">
+                                <label for="paxName">Patient Profile Full Name</label>
+                                <input type="text" id="paxName" class="input-element" placeholder="e.g. Adrian Lim" required>
+                            </div>
+                            
+                            <div class="field-wrap">
+                                <label for="treatTrack">Select Target Care Module</label>
+                                <select id="treatTrack" class="select-element" required>
+                                    <option value="150">Routine Scaling, Polishing & Diagnostics (RM 150)</option>
+                                    <option value="200">Aesthetic Composite Structural Filling (RM 200)</option>
+                                    <option value="950">Micro-Surgical Wisdom Extraction Sequence (RM 950)</option>
+                                    <option value="1500">Premium Bio-Compat Zirconia Crown Unit (RM 1,500)</option>
+                                </select>
+                            </div>
+
+                            <div class="field-wrap">
+                                <label for="appTime">Preferred Matrix Allocation Window</label>
+                                <input type="datetime-local" id="appTime" class="input-element" required>
+                            </div>
+
+                            <button type="submit" class="btn-action-relay" style="background: linear-gradient(90deg, #25D366, #128C7E); color: #fff;"><i class="fab fa-whatsapp" style="font-size: 1.1rem;"></i> Dispatch Booking Matrix via WhatsApp</button>
+                        </form>
+                    </div>
+
+                    <!-- LEDGER COMPUTATION DISPLAY NODE -->
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <div class="ledger-box">
+                            <h3 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #fff;"><i class="fas fa-receipt" style="color: var(--neon-teal); margin-right: 8px;"></i> Session Cost Diagnostics</h3>
+                            
+                            <div class="ledger-line">
+                                <span>Selected Procedure Track:</span>
+                                <span id="ledgerBase">RM 150.00</span>
+                            </div>
+                            <div class="ledger-line">
+                                <span>Disposable Kit & Sterilization:</span>
+                                <span>RM 20.00</span>
+                            </div>
+                            <div class="ledger-line">
+                                <span>SST / Service Fee (6%):</span>
+                                <span id="ledgerTax">RM 9.00</span>
+                            </div>
+                            <div class="ledger-line total-line">
+                                <span>Total Estimated Invoice:</span>
+                                <span id="ledgerTotal">RM 179.00</span>
+                            </div>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; text-align: justify;"><i class="fas fa-info-circle" style="color: var(--neon-blue); margin-right: 6px;"></i> System Guideline Note: Final clinical billing totals are structured upon direct intraoral visualization diagnostics. Tapping dispatch packages data fields cleanly into verified secure strings for rapid WhatsApp intake routing processing.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ORALIS MINT Inc. Structured Healthcare Modules Engine. Kuala Lumpur, Malaysia. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- DYNAMIC CALCULATION CONTROL ENGINE -->
+    <script>
+        const treatSelect = document.getElementById('treatTrack');
+        
+        function computeLiveTolls() {
+            const chosenBase = parseFloat(treatSelect.value);
+            const standardDisposableFee = 20.00;
+            
+            const taxableGross = chosenBase + standardDisposableFee;
+            const sstValue = taxableGross * 0.06;
+            const absoluteInvoiceTotal = taxableGross + sstValue;
+            
+            document.getElementById('ledgerBase').innerText = `RM ${chosenBase.toFixed(2)}`;
+            document.getElementById('ledgerTax').innerText = `RM ${sstValue.toFixed(2)}`;
+            document.getElementById('ledgerTotal').innerText = `RM ${absoluteInvoiceTotal.toFixed(2)}`;
+        }
+
+        treatSelect.addEventListener('change', computeLiveTolls);
+        
+        // Boot execution context matrix load
+        computeLiveTolls();
+
+        // Relay Array Assembly targeting the regional WhatsApp Engine
+        document.getElementById('dentEngineForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            const clinicalReceptionLine = "60123456789"; // Swap custom clinic destination number array here
+            const patientName = document.getElementById('paxName').value;
+            const procedureText = treatSelect.options[treatSelect.selectedIndex].text;
+            const targetTime = document.getElementById('appTime').value;
+            
+            const localFormattedDate = new Date(targetTime).toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' });
+            const totalEstValue = document.getElementById('ledgerTotal').innerText;
+
+            const finalUrlText = `*🦷 ORALIS MINT CLINICAL BOOKING MATRIX*%0A%0A` +
+                                 `*Patient Name:* ${encodeURIComponent(patientName)}%0A` +
+                                 `*Care Profile:* ${encodeURIComponent(procedureText)}%0A` +
+                                 `*Allocated Timeline Window:* ${encodeURIComponent(localFormattedDate)}%0A` +
+                                 `*Estimated Session Gross:* ${encodeURIComponent(totalEstValue)}`;
+                                 
+            window.open(`https://wa.me/${clinicalReceptionLine}?text=${finalUrlText}`, '_blank');
+        });
+    </script>
+</body>
+</html>
