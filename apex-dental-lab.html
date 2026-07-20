@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX DENTAL LAB | Digital Dentistry & Implants</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-tech { font-family: 'Chakra Petch', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #070D12; }
+        .glass-card {
+            background: rgba(13, 23, 33, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 229, 255, 0.15);
+        }
+        .page-section { display: none; }
+        .page-section.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="text-slate-100 antialiased selection:bg-[#00E5FF] selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-[#070D12]/90 border-b border-cyan-900/40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" onclick="showPage('home')" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#00E5FF] text-black font-tech font-extrabold flex items-center justify-center text-xl">AD</div>
+                <div>
+                    <span class="font-tech text-xl font-bold tracking-wider text-white uppercase block leading-none">APEX<span class="text-[#00E5FF]">DENTAL</span></span>
+                    <span class="text-[9px] font-mono tracking-[0.3em] text-cyan-400 uppercase">3D DIGITAL CLINIC</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-xl border border-cyan-900/40 text-xs font-tech">
+                <button onclick="showPage('home')" id="nav-home" class="nav-btn px-5 py-2 rounded-lg uppercase tracking-wider text-[#00E5FF] bg-cyan-950/60">Home</button>
+                <button onclick="showPage('tech')" id="nav-tech" class="nav-btn px-5 py-2 rounded-lg uppercase tracking-wider text-slate-400 hover:text-white">3D Tech & Implants</button>
+                <button onclick="showPage('branches')" id="nav-branches" class="nav-btn px-5 py-2 rounded-lg uppercase tracking-wider text-slate-400 hover:text-white">Clinics</button>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/60123456789?text=Hi%20Apex%20Dental!%20I%20am%20inquiring%20about%20a%20dental%20implant%20scan." target="_blank" class="hidden sm:inline-flex items-center gap-2 border border-cyan-500/40 bg-cyan-950/30 text-cyan-400 hover:bg-cyan-500 hover:text-black px-4 py-2 rounded-xl text-xs font-tech uppercase tracking-wider transition-all">
+                    <span>💬</span> WhatsApp Direct
+                </a>
+                <button onclick="showPage('booking')" class="bg-[#00E5FF] hover:bg-cyan-300 text-black px-5 py-2.5 rounded-xl font-tech font-bold text-xs uppercase tracking-widest transition-all">
+                    Book 3D Scan
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page 1: Home -->
+    <main id="page-home" class="page-section active">
+        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-[#00E5FF] text-[10px] font-mono tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-[#00E5FF] animate-ping"></span>
+                    CBCT 3D IMAGING & SAME-DAY IMPLANTS
+                </div>
+                <h1 class="font-tech text-5xl sm:text-7xl font-bold text-white uppercase leading-none tracking-tight">
+                    PRECISION DIGITAL <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-cyan-200 to-white">DENTISTRY.</span>
+                </h1>
+                <p class="text-slate-400 text-sm sm:text-base font-light max-w-lg leading-relaxed">
+                    Painless computerized implantology, laser gum therapy, and AI-assisted smile design with microscopic precision.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button onclick="showPage('booking')" class="bg-[#00E5FF] text-black font-tech font-bold px-8 py-4 rounded-xl text-xs uppercase tracking-widest hover:bg-cyan-300 transition-all">
+                        Schedule Consultation
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-5 glass-card p-8 rounded-3xl space-y-6">
+                <div class="flex justify-between items-center border-b border-cyan-900/60 pb-3 font-tech text-xs">
+                    <span class="text-[#00E5FF]">// CLINICAL METRICS</span>
+                    <span class="text-slate-500">SYSTEM READY</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 font-tech">
+                    <div class="p-4 bg-black/50 rounded-xl border border-cyan-900/40">
+                        <div class="text-2xl font-bold text-[#00E5FF]">99.4%</div>
+                        <div class="text-[10px] text-slate-400 uppercase">Implant Success Rate</div>
+                    </div>
+                    <div class="p-4 bg-black/50 rounded-xl border border-cyan-900/40">
+                        <div class="text-2xl font-bold text-white">0.01mm</div>
+                        <div class="text-[10px] text-slate-400 uppercase">3D Scan Precision</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page 2: Tech & Services -->
+    <main id="page-tech" class="page-section">
+        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-3 font-tech">
+                <span class="text-xs text-[#00E5FF] uppercase tracking-widest">// Advanced Clinical Technology</span>
+                <h2 class="text-4xl font-bold text-white uppercase">OUR PROCEDURES</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <span class="font-tech text-xs text-[#00E5FF]">01_IMPLANTS</span>
+                    <h3 class="font-tech text-2xl font-bold text-white">Keyhole Guided Implants</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Computer-guided flapless implant placement for minimal swelling and fast recovery.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <span class="font-tech text-xs text-[#00E5FF]">02_ALIGNERS</span>
+                    <h3 class="font-tech text-2xl font-bold text-white">AI Orthodontics</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Digitally simulated tooth movement paired with ultra-clear medical grade aligners.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <span class="font-tech text-xs text-[#00E5FF]">03_SURGERY</span>
+                    <h3 class="font-tech text-2xl font-bold text-white">Laser Periodontics</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Waterlase laser therapy for painless gum contouring and deep periodontal treatment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page 3: Branches -->
+    <main id="page-branches" class="page-section">
+        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-3 font-tech">
+                <span class="text-xs text-[#00E5FF] uppercase tracking-widest">// Clinic Locations</span>
+                <h2 class="text-4xl font-bold text-white uppercase">LOCATE A CLINIC</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <h3 class="font-tech text-2xl font-bold text-white">Damansara Digital Lab</h3>
+                    <p class="text-xs text-slate-400">Unit G-03, PJ Tower, 46200 Petaling Jaya, Selangor</p>
+                    <div class="pt-4 border-t border-cyan-900/40 flex justify-between items-center text-xs font-tech">
+                        <span class="text-slate-500">Mon - Sun: 9:00 AM - 8:00 PM</span>
+                        <a href="https://wa.me/60123456789?text=Hi%20Apex%20Damansara!" target="_blank" class="text-[#00E5FF] font-bold hover:underline">WhatsApp Clinic →</a>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <h3 class="font-tech text-2xl font-bold text-white">Subang Specialist Hub</h3>
+                    <p class="text-xs text-slate-400">Bay 8, Subang Commercial Centre, 47500 Subang Jaya</p>
+                    <div class="pt-4 border-t border-cyan-900/40 flex justify-between items-center text-xs font-tech">
+                        <span class="text-slate-500">Mon - Sun: 9:00 AM - 8:00 PM</span>
+                        <a href="https://wa.me/60129876543?text=Hi%20Apex%20Subang!" target="_blank" class="text-[#00E5FF] font-bold hover:underline">WhatsApp Clinic →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page 4: Booking Form -->
+    <main id="page-booking" class="page-section">
+        <section class="max-w-xl mx-auto px-6 py-16">
+            <div class="glass-card p-8 sm:p-12 rounded-3xl space-y-6">
+                <div class="text-center space-y-2 font-tech">
+                    <span class="text-xs text-[#00E5FF] uppercase tracking-widest">// Priority Reservation</span>
+                    <h2 class="text-3xl text-white uppercase font-bold">BOOK CONSULTATION</h2>
+                </div>
+                <form onsubmit="handleApexBooking(event)" class="space-y-4 text-xs font-tech">
+                    <div>
+                        <label class="block text-slate-400 uppercase mb-1">Select Clinic</label>
+                        <select id="apex-branch" class="w-full bg-black/60 border border-cyan-900/60 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-[#00E5FF]">
+                            <option value="Damansara">Damansara Digital Lab</option>
+                            <option value="Subang">Subang Specialist Hub</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-slate-400 uppercase mb-1">Full Name</label>
+                        <input type="text" id="apex-name" required placeholder="John Smith" class="w-full bg-black/60 border border-cyan-900/60 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-[#00E5FF]">
+                    </div>
+                    <div>
+                        <label class="block text-slate-400 uppercase mb-1">WhatsApp Mobile Number</label>
+                        <input type="tel" id="apex-phone" required placeholder="+60123456789" class="w-full bg-black/60 border border-cyan-900/60 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-[#00E5FF]">
+                    </div>
+                    <button type="submit" class="w-full bg-[#00E5FF] text-black font-bold py-4 rounded-xl text-xs uppercase tracking-widest hover:bg-cyan-300 transition-all">
+                        Dispatch WhatsApp Reservation
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-cyan-900/40 text-center text-xs font-mono text-slate-600">
+        <p>© 2026 APEX DENTAL LABS • ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = "nav-btn px-5 py-2 rounded-lg uppercase tracking-wider text-slate-400 hover:text-white";
+            });
+            document.getElementById('page-' + pageId).classList.add('active');
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.className = "nav-btn px-5 py-2 rounded-lg uppercase tracking-wider text-[#00E5FF] bg-cyan-950/60";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleApexBooking(e) {
+            e.preventDefault();
+            const branch = document.getElementById('apex-branch').value;
+            const name = document.getElementById('apex-name').value;
+            const phone = document.getElementById('apex-phone').value;
+            const msg = `Hi%20Apex%20Dental!%20I%20would%20like%20to%20book%20a%203D%20Dental%20Scan%20at%20${encodeURIComponent(branch)}.%20Name:%20${encodeURIComponent(name)}%20(${encodeURIComponent(phone)}).`;
+            window.open(`https://wa.me/60123456789?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
