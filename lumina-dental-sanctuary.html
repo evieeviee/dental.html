@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA DENTAL | Aesthetic & Restorative Clinic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-serif-title { font-family: 'Cormorant Garamond', serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8F6F2; }
+        .page-section { display: none; }
+        .page-section.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="text-stone-800 antialiased selection:bg-[#2D5A52] selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-[#F8F6F2]/90 border-b border-stone-200/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" onclick="showPage('home')" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-[#2D5A52] text-white flex items-center justify-center font-serif-title text-xl font-bold">L</div>
+                <div>
+                    <span class="font-serif-title text-2xl font-semibold tracking-wider text-stone-900 uppercase leading-none block">LUMINA</span>
+                    <span class="text-[9px] font-sans tracking-[0.25em] text-[#2D5A52] uppercase block font-medium">Dental Sanctuary</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-1 bg-stone-200/50 p-1.5 rounded-full border border-stone-300/50 text-xs font-medium">
+                <button onclick="showPage('home')" id="nav-home" class="nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-900 bg-white shadow-sm transition-all">Home</button>
+                <button onclick="showPage('services')" id="nav-services" class="nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-all">Services</button>
+                <button onclick="showPage('locations')" id="nav-locations" class="nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-all">Clinics & Contact</button>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/60123456789?text=Hi%20Lumina%20Dental!%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="hidden sm:inline-flex items-center gap-2 border border-stone-300 text-stone-800 hover:bg-stone-200/50 px-4 py-2 rounded-full text-xs font-medium transition-all">
+                    <span>💬</span> WhatsApp Clinic
+                </a>
+                <button onclick="showPage('booking')" class="bg-[#2D5A52] hover:bg-stone-900 text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all shadow-md">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page 1: Home -->
+    <main id="page-home" class="page-section active">
+        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="text-xs font-mono tracking-widest text-[#2D5A52] uppercase font-semibold">// Gentle Dental Care</span>
+                <h1 class="font-serif-title text-5xl sm:text-7xl font-normal text-stone-900 leading-[1.05]">
+                    Crafting healthy, <br>
+                    <span class="italic text-[#2D5A52]">radiant smiles</span> with care.
+                </h1>
+                <p class="text-stone-600 text-base max-w-lg font-light leading-relaxed">
+                    Experience anxiety-free, state-of-the-art dental procedures in a calming sanctuary environment. From porcelain veneers to precision implants.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <button onclick="showPage('booking')" class="bg-[#2D5A52] text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:bg-stone-900 transition-all shadow-lg">
+                        Reserve Consultation
+                    </button>
+                    <button onclick="showPage('services')" class="border border-stone-300 text-stone-800 px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:border-stone-900 transition-all">
+                        Explore Treatments
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="bg-stone-200/60 p-4 rounded-3xl border border-stone-300/60">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Lumina Dental Studio" class="rounded-2xl w-full h-[450px] object-cover">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page 2: Services -->
+    <main id="page-services" class="page-section">
+        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-3">
+                <span class="text-xs font-mono text-[#2D5A52] uppercase tracking-widest">// Treatment Programs</span>
+                <h2 class="font-serif-title text-4xl sm:text-5xl text-stone-900">COMPREHENSIVE CARE</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4 hover:shadow-lg transition-all">
+                    <div class="text-[#2D5A52] font-serif-title text-3xl">01</div>
+                    <h3 class="font-serif-title text-2xl text-stone-900">Cosmetic Veneers</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Custom ultra-thin porcelain veneers designed to transform smile symmetry, shape, and shade naturally.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4 hover:shadow-lg transition-all">
+                    <div class="text-[#2D5A52] font-serif-title text-3xl">02</div>
+                    <h3 class="font-serif-title text-2xl text-stone-900">Invisalign® Aligners</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Virtually invisible clear aligner therapy tailored for precise teeth straightening without metal braces.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4 hover:shadow-lg transition-all">
+                    <div class="text-[#2D5A52] font-serif-title text-3xl">03</div>
+                    <h3 class="font-serif-title text-2xl text-stone-900">Dental Implants</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">3D guided permanent tooth replacement solutions restoring full bite strength and natural aesthetics.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page 3: Locations & Contact -->
+    <main id="page-locations" class="page-section">
+        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-3">
+                <span class="text-xs font-mono text-[#2D5A52] uppercase tracking-widest">// Convenient Access</span>
+                <h2 class="font-serif-title text-4xl sm:text-5xl text-stone-900">OUR CLINICS</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4">
+                    <h3 class="font-serif-title text-3xl text-stone-900">Bangsar Medical Suites</h3>
+                    <p class="text-xs text-stone-600">Suite 5-02, Menara Bangsar, Jalan Maarof, 59000 Kuala Lumpur</p>
+                    <div class="pt-4 border-t border-stone-200 flex justify-between items-center text-xs">
+                        <span class="text-stone-500">Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        <a href="https://wa.me/60123456789?text=Hi%20Lumina%20Bangsar!%20I%20want%20to%20book%20an%20appointment." target="_blank" class="text-[#2D5A52] font-semibold hover:underline">WhatsApp Clinic →</a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4">
+                    <h3 class="font-serif-title text-3xl text-stone-900">Mont Kiara Centre</h3>
+                    <p class="text-xs text-stone-600">G-12, Plaza Mont Kiara, 50480 Kuala Lumpur</p>
+                    <div class="pt-4 border-t border-stone-200 flex justify-between items-center text-xs">
+                        <span class="text-stone-500">Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        <a href="https://wa.me/60129876543?text=Hi%20Lumina%20Mont%20Kiara!%20I%20want%20to%20book%20an%20appointment." target="_blank" class="text-[#2D5A52] font-semibold hover:underline">WhatsApp Clinic →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page 4: Booking Form -->
+    <main id="page-booking" class="page-section">
+        <section class="max-w-xl mx-auto px-6 py-16">
+            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-stone-200 space-y-6 shadow-xl">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-mono text-[#2D5A52] uppercase tracking-widest">// Direct Reservation</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-stone-900">BOOK YOUR VISIT</h2>
+                </div>
+                <form onsubmit="handleDentalBooking(event)" class="space-y-4 text-xs">
+                    <div>
+                        <label class="block text-stone-600 font-medium mb-1">Preferred Clinic Branch</label>
+                        <select id="doc-branch" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
+                            <option value="Bangsar">Bangsar Medical Suites</option>
+                            <option value="Mont Kiara">Mont Kiara Centre</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-stone-600 font-medium mb-1">Service Required</label>
+                        <select id="doc-service" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
+                            <option value="General Checkup & Cleaning">General Checkup & Cleaning</option>
+                            <option value="Teeth Whitening">Teeth Whitening</option>
+                            <option value="Invisalign Consultation">Invisalign® Consultation</option>
+                            <option value="Veneers / Cosmetic">Veneers / Cosmetic Smile Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-stone-600 font-medium mb-1">Full Name</label>
+                        <input type="text" id="doc-name" required placeholder="Jane Doe" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
+                    </div>
+                    <div>
+                        <label class="block text-stone-600 font-medium mb-1">Mobile / WhatsApp Number</label>
+                        <input type="tel" id="doc-phone" required placeholder="+60123456789" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
+                    </div>
+                    <button type="submit" class="w-full bg-[#2D5A52] text-white font-medium py-4 rounded-xl text-xs uppercase tracking-widest hover:bg-stone-900 transition-all shadow-md">
+                        Confirm Appointment via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-stone-200 text-center text-xs font-mono text-stone-500">
+        <p>© 2026 LUMINA DENTAL SANCTUARY • ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = "nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-all";
+            });
+            document.getElementById('page-' + pageId).classList.add('active');
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.className = "nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-900 bg-white shadow-sm transition-all";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleDentalBooking(e) {
+            e.preventDefault();
+            const branch = document.getElementById('doc-branch').value;
+            const service = document.getElementById('doc-service').value;
+            const name = document.getElementById('doc-name').value;
+            const phone = document.getElementById('doc-phone').value;
+            const msg = `Hi%20Lumina%20Dental!%20I%20would%20like%20to%20book%20a%20${encodeURIComponent(service)}%20appointment%20at%20the%20${encodeURIComponent(branch)}%20branch.%20My%20Name:%20${encodeURIComponent(name)}%20(${encodeURIComponent(phone)}).`;
+            window.open(`https://wa.me/60123456789?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
